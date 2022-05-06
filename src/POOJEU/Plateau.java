@@ -1,6 +1,9 @@
 package POOJEU;
 
 import java.util.Random;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Plateau {
@@ -8,10 +11,14 @@ public class Plateau {
 	private int ID;
 	private int caseActuelle = 0;
 	private Case[] cases = new Case[100];
-
+    private String[] definitions = new String[10];
+	private String[] motDefinitions = new String[10];
+	
+	
 	public Plateau() {
 		ID = num;
 		num++;
+		intDefinitions () ;
 		Random random;
 		int caseNumber;
 		boolean jobDone = false;
@@ -39,7 +46,7 @@ public class Plateau {
 				random = new Random();
 				caseNumber = random.nextInt(100);
 				if (cases[caseNumber]==null) {
-					cases[caseNumber]=new CaseDefinition(caseNumber);
+					cases[caseNumber]=new CaseDefinition(caseNumber,definitions[i],motDefinitions[i]);
 					jobDone = true;
 				}
 			}
@@ -74,6 +81,9 @@ public class Plateau {
 	} // init
 
 	public void sauvgardeFichier() {
+
+
+
 	}
 
 	public Case getCase(int nbCase) {
@@ -93,6 +103,33 @@ public class Plateau {
 			System.out.println(i+1+" :"+cases[i].getClass());
 		}
 	}
+   
+	public void intDefinitions (){
+         
+		String file = "C://Users//CBS Computer//Desktop//definitions.txt";
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) 
+        {   int i =0 ;
+            String  mot , def;
+            while ((mot= br.readLine()) != null) {
+            motDefinitions[i]=mot;
+			def= br.readLine() ;
+			definitions[i]= def ;
+			i++ ;
+            }
+        }
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    } //comme parametre ikoun le fichier ta3 definition 
+	public void intImages(){} //comme parametre ikoun le fichier ta3 definition 
 
+	public String getDefinitions(int i) {
+		return definitions[i];
+	}
+
+	public String getMotDefinitions(int i)  {
+		return motDefinitions[i];
+	}
 
 }

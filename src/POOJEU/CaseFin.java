@@ -8,5 +8,11 @@ public class CaseFin extends Case {
     private  final String couleur="noir";
     public void action(Plateau plateau , Joueur joueur ){
 
+    }
+    @Override
+    public String toString() {
+        return "CaseFin [couleur=" + couleur + "]";
     };
+    
+
 }

@@ -8,6 +8,11 @@ public class CaseParcours extends Case {
    }
 
    public void action(Plateau plateau, Joueur joueur) {
+   }
+
+   @Override
+   public String toString() {
+      return "CaseParcours [couleur=" + couleur + "]";
    }; // aucune action
 
 }

@@ -13,6 +13,12 @@ public class CaseSaut extends Case {
 		Random random = new Random();
 		int nb = random.nextInt(100);
 		plateau.setCaseActuelle(nb);
+		System.out.println("Vous etes maintenant dans la case :"+nb);
+	}
+
+	@Override
+	public String toString() {
+		return "CaseSaut [couleur=" + couleur + "]";
 	};
 
 	// aficher le num de la case

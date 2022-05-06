@@ -16,17 +16,23 @@ public class CaseImage extends CaseQuestion {
 	public void action(Plateau plateau, Joueur joueur) {
 		Scanner sc = new Scanner(System.in);
 		if (dejaParcourue = true) {
-			nouvelleQuestion();
+			nouvelleQuestion(plateau);
 		}
 		// affichage du mot
-		if (sc.nextInt() == imageCorrecte) {
+		/*if (sc.nextInt() == imageCorrecte) {
 			joueur.setScoreActuel(joueur.getScoreActuel() + 10);
 			plateau.setCaseActuelle(plateau.getCaseActuelle() + 2);
-		}
+		}*/
 	}
 
-	public void nouvelleQuestion() {
+	public void nouvelleQuestion(Plateau plateau) {
 	}
+
+	@Override
+	public String toString() {
+		return "CaseImage [couleur=" + couleur + "]";
+	}
+	
 	// public void verifieReponse() {}
 
 }
