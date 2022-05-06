@@ -62,5 +62,6 @@ public class Joueur {
 	public void setScoreActuel(int scoreActuel) {
 		this.scoreActuel = scoreActuel;
 	}
+
 	
 }

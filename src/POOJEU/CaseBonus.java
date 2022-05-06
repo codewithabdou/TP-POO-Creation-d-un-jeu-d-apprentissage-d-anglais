@@ -7,4 +7,8 @@ public class CaseBonus extends  Case{
 		   joueur.setScoreActuel(joueur.getScoreActuel()+10);
 		   plateau.setCaseActuelle(plateau.getCaseActuelle()+2) ;
 	   };
+
+	   public CaseBonus(int num){
+		   numero=num;
+	   }
 }

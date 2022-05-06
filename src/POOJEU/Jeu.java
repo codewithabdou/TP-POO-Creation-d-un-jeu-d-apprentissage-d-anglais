@@ -22,7 +22,7 @@ public class Jeu {
     plateau =new Plateau();
     while (plateau.getCaseActuelle()!=99) {
     	plateau.setCaseActuelle(plateau.getCaseActuelle()+joueurCourant.lancerDes()); 
-        plateau.getCase(plateau.getCaseActuelle()).action(plateau ,joueurCourant)	;
+        plateau.getCase(plateau.getCaseActuelle()).action(plateau ,joueurCourant);
     }
     
     };
