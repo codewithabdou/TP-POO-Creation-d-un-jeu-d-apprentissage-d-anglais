@@ -11,4 +11,5 @@ public class CaseDepart extends Case{
 		// TODO Auto-generated method stub
 		
 	};
+	
 }

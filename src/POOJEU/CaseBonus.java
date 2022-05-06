@@ -6,9 +6,16 @@ public class CaseBonus extends  Case{
 	   public void action(Plateau plateau , Joueur joueur) {
 		   joueur.setScoreActuel(joueur.getScoreActuel()+10);
 		   plateau.setCaseActuelle(plateau.getCaseActuelle()+2) ;
+		   System.out.println("vous venez de gagner +10 points " );
+		   System.out.println("vous venez d'avancer de +2 cases " );
 	   };
 
-	   public CaseBonus(int num){
+	   @Override
+	public String toString() {
+		return "CaseBonus [couleur=" + couleur + "]";
+	}
+
+	public CaseBonus(int num){
 		   numero=num;
 	   }
 }
